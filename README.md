@@ -6,6 +6,7 @@ Preview buildable items and recipes
 
 
 
+
 ### Prerequisites
 
 ```
@@ -14,16 +15,24 @@ a custom compliles.sqf, keyboard.sqf or another way to open the menu
 ```
 
 
+
+
+
 ### Install
 
 In your **description.ext** at the bottom paste
+
 (below chx_defines.hpp from the trader catalogue)
+
 
 ```
 #include "scripts\recipes\chx_buildings.hpp" 
 ```
 
 Save and close.
+
+
+
 
 
 
@@ -37,6 +46,8 @@ In your **compiles.sqf** find
 if (!isDedicated) then {
 ```
 
+
+
 Somewhere below that paste
 
 ```
@@ -44,7 +55,10 @@ call compile preprocessFileLineNumbers "scripts\recipes\init.sqf";
 
 ```
 
+
 Save and close.
+
+
 
 
 
@@ -52,9 +66,11 @@ Save and close.
 //-------------------------------------------------------------------------
 
 Next, open your **keyboard.sqf**, scroll to the bottom and above the last 
+
 ```
 _handled
 ```
+
 
 Paste
 
@@ -62,8 +78,11 @@ Paste
 	if (_dikCode == 0x25) then { [] call building_catalog;	};	// Recipes (K) Button
 ```
 
+
 Save and close.
+
 //-------------------------------------------------------------------------
+
 
 
 
