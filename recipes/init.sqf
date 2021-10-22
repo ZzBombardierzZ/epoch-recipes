@@ -1,6 +1,7 @@
 	building_catalog = {
 		disableSerialization;
 		if (dayz_actionInProgress) exitWith { localize "str_player_actionslimit" call dayz_rollingMessages; };
+		if (dayz_autoRun) then {call dayz_autoRunOff;};
 		local _inCombat = player getVariable ["inCombat",false];
 		if (_inCombat) exitWith {"Cannot open while in combat." call dayz_rollingMessages;};
 		if (!(isNull (findDisplay 7121197))) exitwith  { closeDialog 0; };
